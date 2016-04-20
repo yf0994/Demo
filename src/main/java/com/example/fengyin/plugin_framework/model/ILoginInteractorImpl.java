@@ -4,11 +4,11 @@ import android.content.Context;
 import android.util.Log;
 
 import com.category.base.net.IReponseListener;
+import com.category.base.net.Params;
 import com.category.base.net.RequestCallback;
+import com.category.base.net.RequestManager;
 import com.example.fengyin.plugin_framework.Result;
 import com.example.fengyin.plugin_framework.Util;
-import com.example.fengyin.plugin_framework.net.Params;
-import com.example.fengyin.plugin_framework.net.RequestManager;
 
 import org.json.JSONObject;
 
@@ -51,6 +51,7 @@ public class ILoginInteractorImpl implements ILoginInteractor<Result> {
 //            public void afterRequest() {
 //                callback.requestComplete();
 //            }
+//        });
 //        });
         Params emailParams = new Params("account", email);
         Params passwordParams = new Params("passwd", Util.getPswMD5Str("xthinkers" + password));
